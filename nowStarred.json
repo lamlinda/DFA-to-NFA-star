@@ -1,0 +1,7 @@
+{ 
+ "setOfStates": ["q'", "q0", "q1", "q2", "q3"], 
+"alphabet": ["a", "b"], 
+"transitions": {"q'": {"E": "q0"}, "q0": {"a": "q1", "b": "q2"}, "q1": {"a": "q3", "b": "q1"}, "q2": {"a": "q2", "b": "q2"}, "q3": {"a": "q3", "b": "q1", "E": "q0"}}, 
+"startState": "q'", 
+"acceptingState": ["q'", "q3"]
+}

@@ -56,5 +56,38 @@ print("Alphabet: ", alpha)
 print("Transitions: ", temp2)
 print("State state: ", start)
 print("Accepting states", accept)
+print("Wrote new NFA to nowStarred.json")
+
+#write to file
+f = open("nowStarred.json", "w")
+
+#Write opening bracket to json file
+f.write("{ \n")
+
+#write set of states to output json file
+statesString = " \"setOfStates\": " + json.dumps(statesSet) + ", \n"
+f.write(statesString)
+
+#write alphabet to output json file
+letters = "\"alphabet\": " + json.dumps(alpha) + ", \n"
+f.write(letters)
+
+#write transitions to output json file
+transString = "\"transitions\": " + json.dumps(temp2) + ", \n"
+f.write(transString)
+
+#write start state to output json file
+startString = "\"startState\": \"" + start + "\", \n"
+f.write(startString)
+
+#write accepting state to output json file
+acceptString = "\"acceptingState\": " + json.dumps(accept) + "\n"
+f.write(acceptString)
+
+#write closing bracket to json file
+f.write("}")
+
+
+
 
 
