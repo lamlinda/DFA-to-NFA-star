@@ -25,6 +25,7 @@ for i in data:
 
 #create a temporary state and make it transition from
 #accepting state to start state for A*
+trans[accept[0]] = {}
 temp = trans[accept[0]]
 temp["E"] = start
 
