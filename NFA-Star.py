@@ -6,7 +6,7 @@ def readFile(file):
 
     return
 
-f = open('testing.json',)
+f = open('testing2.json',)
 
 data = json.load(f)
 

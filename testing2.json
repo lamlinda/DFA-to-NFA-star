@@ -1,0 +1,12 @@
+{
+    "setOfStates": ["q0", "q1"],
+    "alphabet": ["a"],
+    
+    "transitions": {"q0":{"a":"q1"}, 
+                    "q1":{"a":"q0"}
+                    },
+                    
+    "startState": "q0",
+    "acceptingState": "q1"
+
+}
