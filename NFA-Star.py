@@ -5,9 +5,16 @@ import json
 #file to run in the program
 n = sys.argv
 
-#open and load the file
-f = open(n[1],)
-data = json.load(f)
+#make sure json file is in proper format so it doesn't
+#crash the program
+try:
+    #open and load the file
+    f = open(n[1],)
+    data = json.load(f)
+except:
+    print("json file in improper format.")
+    print("Exiting program now...")
+    quit()
 
 #create variables for each item in the input dictionary
 for i in data:
@@ -22,6 +29,27 @@ for i in data:
     elif i == "acceptingState":
         accept = data[i]
 
+#Check if input has q' as one of its states. If it does,
+#print error message and exit the program
+if('q\'' in statesSet):
+    print("q\' can not be in set of states")
+    print("Exiting program...")
+    quit()
+
+#check if transitions contain valid states
+for a in trans:
+    if(a not in statesSet):
+        print("Invalid Transition. \'" + a + "\' is not in set of states.")
+        print("Exiting program...")
+        quit()
+
+#check if transitions use proper alphabet
+for a in trans:
+    for b in trans[a]:
+        if(b not in alpha and b != 'E'):
+            print("Invalid transistion. \'" + b + "\' is not in alphabet.")
+            print("Exiting program...")
+            quit()
 
 #create a temporary state and make it transition from
 #accepting state to start state for A*
