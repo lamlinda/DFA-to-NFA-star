@@ -50,7 +50,14 @@ for a in trans:
             print("Invalid transistion. \'" + b + "\' is not in alphabet.")
             print("Exiting program...")
             quit()
-
+#check if transitions go to a valid state
+for a in trans:
+    for b in trans[a]:
+        for c in trans[a][b]:
+            if(trans[a][b] not in statesSet):
+                print("Invalid transistion. \'" + trans[a][b] + "\' is not in set of states.")
+                print("Exiting program...")
+                quit()
 #create a temporary state and make it transition from
 #accepting state to start state for A*
 trans[accept[0]] = {}
