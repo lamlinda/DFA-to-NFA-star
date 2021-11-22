@@ -24,7 +24,7 @@ Example:
 {
     
     setOfStates": ["q0", "q1", "q2", "q3"],
-    "alphabet": ["a", "b"],
+    "alphabet": ["a", "b"],      //epsilon transitions are represented by an 'E'
     
     "transitions": {"q0":{"a":"q1", "b":"q2"},  //our files are formatted so that in this line, at q0 on an 'a' will go to state q1 and so on
                     "q1":{"a":"q3", "b":"q1"},
