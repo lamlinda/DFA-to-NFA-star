@@ -22,6 +22,7 @@ To create a test file, follow the formal description format.
 Example:
 
 {
+    
     setOfStates": ["q0", "q1", "q2", "q3"],
     "alphabet": ["a", "b"],
     
