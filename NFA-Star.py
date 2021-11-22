@@ -28,6 +28,10 @@ for i in data:
         start = data[i]
     elif i == "acceptingState":
         accept = data[i]
+    else:
+        print("Improper file format")
+        print("Exiting program...")
+        quit()
 
 #Check if input has q' as one of its states. If it does,
 #print error message and exit the program
