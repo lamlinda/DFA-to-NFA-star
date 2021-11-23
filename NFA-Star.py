@@ -64,12 +64,18 @@ for a in trans:
                 quit()
 #create a temporary state and make it transition from
 #accepting state to start state for A*
-trans[accept[0]] = {}
-temp = trans[accept[0]]
-temp["E"] = start
+for a in accept:
+    #trans[a] = trans[a]
+    if(a not in trans):
+        trans[a] = {}
+        temp = trans[a]
+        temp["E"] = start 
+    else:
+        temp = trans[a]
+        temp["E"] = start
 
 #Overwrite the accepting state with the temp state
-data['transitions'][accept[0]] = temp
+#data['transitions'][accept[0]] = temp
 
 #make new start state q'
 statesSet.insert(0, 'q\'')

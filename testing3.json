@@ -9,6 +9,6 @@
                     },
                     
     "startState": "q0",
-    "acceptingState": ["q3"]
+    "acceptingState": ["q2","q3"]
 
 }
