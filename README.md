@@ -1,5 +1,5 @@
 # DFA-to-NFA-star
-Given a DFA or NFA, give the NFA for its'star
+Given a DFA or NFA, give the NFA for its' star
 
 To run the program, type "python NFA-Star.py" followed by the json file containing the DFA/NFA you want to preform the star operation on.
 
